@@ -28,6 +28,6 @@ public class Menu : MonoBehaviour
     }
     public void LoadOn()
     {
-        Application.LoadLevel (game);
+        Application.LoadLevel ("game");
     }
 }
