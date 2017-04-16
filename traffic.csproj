@@ -78,7 +78,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\curveScript.cs" />
     <Compile Include="Assets\Scripts\spawnScript.cs" />
+    <Compile Include="Assets\Scripts\splineScript.cs" />
+    <Compile Include="Assets\Scripts\trafficLightScript.cs" />
     <Compile Include="Assets\Scripts\vehicleScript.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

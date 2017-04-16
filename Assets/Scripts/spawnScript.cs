@@ -29,7 +29,7 @@ public class spawnScript : MonoBehaviour {
 
     IEnumerator cooldown(float wait)
     {
-        
+
         print("cool");
         yield return new WaitForSeconds(wait);
         cool = false;
