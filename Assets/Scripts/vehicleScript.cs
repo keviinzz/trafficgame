@@ -6,9 +6,14 @@ public class vehicleScript : MonoBehaviour {
 
     [SerializeField]
     private Sprite[] arraySprite;
-    Rigidbody2D rb;
-    SpriteRenderer sprite;
-    int speed=1;
+    [SerializeField]
+    private Transform rayFront;
+    private Rigidbody2D rb;
+    private RaycastHit2D hit;
+    private bool frontEmpty = true;
+    private SpriteRenderer sprite;
+    private int speed=1;
+
 	// Use this for initialization
 	void Start () {
         sprite = GetComponent<SpriteRenderer>();
@@ -18,7 +23,9 @@ public class vehicleScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        
+
+        checkFront();
+
         rb.AddForce(transform.right * speed);
 
 	}
@@ -35,5 +42,22 @@ public class vehicleScript : MonoBehaviour {
 
             speed = 0;
         }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.cyan;
+        Gizmos.DrawLine(this.transform.position, rayFront.transform.position);
+    }
+
+    void checkFront()
+    {
+        hit = Physics2D.Linecast(this.transform.position, rayFront.position);
+        if (hit.collider!=null)
+        {
+            if(hit.collider.tag=="Car")
+            speed = 0;
+        }
+     
     }
 }
