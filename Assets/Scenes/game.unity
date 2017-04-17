@@ -3139,10 +3139,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820bfc79a1d0ffe4f826f8dc923421e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startPoint: {fileID: 937892712}
-  endPoint: {fileID: 1020471234}
-  controlPointStart: {fileID: 1215457863}
-  controlPointEnd: {fileID: 265217298}
 --- !u!4 &2040419370
 Transform:
   m_ObjectHideFlags: 0

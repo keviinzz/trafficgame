@@ -84,6 +84,8 @@
     <Compile Include="Assets\Scripts\SpawnScript.cs" />
     <Compile Include="Assets\Scripts\TrafficLightScript.cs" />
     <Compile Include="Assets\Scripts\VehicleScript.cs" />
+    <Compile Include="Assets\Scripts\pause.cs" />
+    <Compile Include="Assets\Scripts\soundToggle.cs" />
     <Compile Include="Assets\Scripts\splineScript.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
