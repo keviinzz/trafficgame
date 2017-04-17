@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class controlScript : MonoBehaviour {
-
+public class ControlScript : MonoBehaviour {
+    //asdsda
     RaycastHit hit;
     Ray ray;
     // Use this for initialization

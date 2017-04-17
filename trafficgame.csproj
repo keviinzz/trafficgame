@@ -78,9 +78,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\ControlScript.cs" />
     <Compile Include="Assets\Scripts\Menu.cs" />
     <Compile Include="Assets\Scripts\QueueScript.cs" />
-    <Compile Include="Assets\Scripts\controlScript.cs" />
     <Compile Include="Assets\Scripts\pause.cs" />
     <Compile Include="Assets\Scripts\soundToggle.cs" />
     <Compile Include="Assets\Scripts\spawnScript.cs" />
