@@ -643,7 +643,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: F*** Traffic Jam
+  m_Text: Stop the Jam
 --- !u!222 &800236944
 CanvasRenderer:
   m_ObjectHideFlags: 0
