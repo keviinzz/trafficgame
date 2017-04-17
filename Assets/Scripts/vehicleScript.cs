@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class VehicleScript : MonoBehaviour {
+public class vehicleScript : MonoBehaviour {
 
     [SerializeField]
     private Sprite[] arraySprite;

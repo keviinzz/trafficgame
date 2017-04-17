@@ -78,15 +78,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\ControlScript.cs" />
     <Compile Include="Assets\Scripts\Menu.cs" />
-    <Compile Include="Assets\Scripts\QueueScript.cs" />
-    <Compile Include="Assets\Scripts\SpawnScript.cs" />
-    <Compile Include="Assets\Scripts\TrafficLightScript.cs" />
-    <Compile Include="Assets\Scripts\VehicleScript.cs" />
+    <Compile Include="Assets\Scripts\controlScript.cs" />
     <Compile Include="Assets\Scripts\pause.cs" />
+    <Compile Include="Assets\Scripts\queueScript.cs" />
     <Compile Include="Assets\Scripts\soundToggle.cs" />
+    <Compile Include="Assets\Scripts\spawnScript.cs" />
     <Compile Include="Assets\Scripts\splineScript.cs" />
+    <Compile Include="Assets\Scripts\trafficLightScript.cs" />
+    <Compile Include="Assets\Scripts\vehicleScript.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

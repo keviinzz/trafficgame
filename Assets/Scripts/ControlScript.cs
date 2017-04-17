@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ControlScript : MonoBehaviour {
+public class controlScript : MonoBehaviour {
 
     RaycastHit hit;
     Ray ray;
@@ -33,7 +33,7 @@ public class ControlScript : MonoBehaviour {
 
             if (hit.transform.tag == "Car")
             {
-                hit.transform.GetComponent<VehicleScript>().setSpeed(2);
+                hit.transform.GetComponent<vehicleScript>().setSpeed(2);
             }
             return hit.transform.gameObject;
         }
