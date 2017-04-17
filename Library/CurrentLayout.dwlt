@@ -62,8 +62,8 @@ MonoBehaviour:
     y: 0
     width: 1319
     height: 1036
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 100, y: 122}
+  m_MaxSize: {x: 4000, y: 4022}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -329,7 +329,7 @@ MonoBehaviour:
   m_MinSize: {x: 277, y: 192}
   m_MaxSize: {x: 4002, y: 8042}
   vertical: 1
-  controlID: 154
+  controlID: 155
 --- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -596,14 +596,14 @@ MonoBehaviour:
     width: 1138
     height: 660
   m_SceneLighting: 1
-  lastFramingTime: 204.62838042469107
+  lastFramingTime: 598.4102393914119
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 1.5959897, y: -0.36999488, z: 0.00390625}
+    m_Target: {x: 0.16816755, y: -0.1990484, z: 0}
     speed: 2
-    m_Value: {x: 1.5959897, y: -0.36999488, z: 0.00390625}
+    m_Value: {x: 0.16816755, y: -0.1990484, z: 0}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -630,9 +630,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 15.602509
+    m_Target: 14.082416
     speed: 2
-    m_Value: 15.602509
+    m_Value: 14.082416
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -723,19 +723,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets
+    - Assets/Prefabs
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets
+  - Assets/Prefabs
   m_LastFoldersGridSize: -1
   m_LastProjectPath: F:\git\trafficgame
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: c4240000
-    m_LastClickedID: 9412
-    m_ExpandedIDs: 00000000c4240000da260000dc260000de260000e0260000e226000000ca9a3bffffff7f
+    m_SelectedIDs: 34250000
+    m_LastClickedID: 9524
+    m_ExpandedIDs: 00000000d0240000102700001227000014270000162700001827000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -763,7 +763,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000c4240000da260000dc260000de260000e0260000e2260000
+    m_ExpandedIDs: 00000000d02400001027000012270000142700001627000018270000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
