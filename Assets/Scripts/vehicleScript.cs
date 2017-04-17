@@ -2,17 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class vehicleScript : MonoBehaviour {
+public class VehicleScript : MonoBehaviour {
 
     [SerializeField]
     private Sprite[] arraySprite;
     [SerializeField]
     private Transform rayFront;
+    [SerializeField]
+    private Transform rayStart;
     private Rigidbody2D rb;
     private RaycastHit2D hit;
     private bool frontEmpty = true;
     private SpriteRenderer sprite;
-    private int speed=1;
+    private int speed=2;
 
 	// Use this for initialization
 	void Start () {
@@ -27,6 +29,8 @@ public class vehicleScript : MonoBehaviour {
         checkFront();
 
         rb.AddForce(transform.right * speed);
+
+
 
 	}
 
@@ -47,17 +51,26 @@ public class vehicleScript : MonoBehaviour {
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.cyan;
-        Gizmos.DrawLine(this.transform.position, rayFront.transform.position);
+        Gizmos.DrawLine(rayStart.position, rayFront.transform.position);
     }
 
     void checkFront()
     {
-        hit = Physics2D.Linecast(this.transform.position, rayFront.position);
+        hit = Physics2D.Linecast(rayStart.position, rayFront.position);
         if (hit.collider!=null)
         {
             if(hit.collider.tag=="Car")
-            speed = 0;
+                speed = 0;
+            if (hit.collider.tag == "Despawn")
+                Destroy(gameObject);
         }
      
+       
+    }
+
+
+    public void setSpeed(int v)
+    {
+        speed = v;
     }
 }

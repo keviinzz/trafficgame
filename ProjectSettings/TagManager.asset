@@ -6,6 +6,7 @@ TagManager:
   tags:
   - roadStop
   - Car
+  - Despawn
   layers:
   - Default
   - TransparentFX

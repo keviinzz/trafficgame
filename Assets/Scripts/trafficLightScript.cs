@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class trafficLightScript : MonoBehaviour {
+public class TrafficLightScript : MonoBehaviour {
 
     
     enum Light { Red, Green};
