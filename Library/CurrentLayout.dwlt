@@ -544,9 +544,9 @@ MonoBehaviour:
     height: 660
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: eaecffff
-    m_LastClickedID: -4886
-    m_ExpandedIDs: defbffff00000000
+    m_SelectedIDs: 92f5ffff
+    m_LastClickedID: -2670
+    m_ExpandedIDs: defbffff000000009c260000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -630,9 +630,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 14.082416
+    m_Target: 11.713606
     speed: 2
-    m_Value: 14.082416
+    m_Value: 11.713606
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -794,18 +794,18 @@ MonoBehaviour:
     m_ExpandedInstanceIDs: 242200005ed4fffffa0901004c2200002222000050220000482300002a2200001ab900002cb9000070a800002c22000042220000502c00000c07000030220000f6230000f8230000d4230000522300006e2200008c22000064220000fe230000362200003e2200003e240000464d00002c290000462400002a2300003a2600004c240000b42400003a230000c422000076720000b67200007a720000a2220000ac720000e4220000cad903004022000068230000ee2400000a24000070230000f8220000dc2200009e220000062400001ca7fbffca2b00002e280000c8220000d42200003cc40000f0690100b67b0100c889010088a2010022850100de210000e2220000e4210000000000001825000024250000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: QueueScript
+      m_OriginalName: QueueScript
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 1448
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 13}
     m_CreateAssetUtility:
