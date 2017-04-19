@@ -14,16 +14,21 @@ public class vehicleScript : MonoBehaviour {
 	private RaycastHit2D hit;
 	private bool frontEmpty = true;
 	private SpriteRenderer sprite;
-	private int speed=2;
+	private int speed=4;
 	private AudioSource carcrash; 
 	public score s;
     public ingameUIScript iuis;
+    private float defaultdrag = 2.5f;
 
-	// Use this for initialization
-	void Start () {
-		sprite = GetComponent<SpriteRenderer>();
-		sprite.sprite = arraySprite[Random.Range(0, arraySprite.Length)];
-		rb = GetComponent<Rigidbody2D>();
+    // Use this for initialization
+    void Start() {
+        int spriteNumber = Random.Range(0, arraySprite.Length);
+        sprite = GetComponent<SpriteRenderer>();
+        sprite.sprite = arraySprite[spriteNumber];
+        if (spriteNumber >= 1) {
+            sprite.material.color = new Color(Random.Range(0.2f, 1f), Random.Range(0.2f, 1f), Random.Range(0.2f, 1f), 1f);
+     }
+        rb = GetComponent<Rigidbody2D>();
 		carcrash = GetComponent<AudioSource>();
 
 	}
@@ -33,7 +38,7 @@ public class vehicleScript : MonoBehaviour {
 
 		checkFront();
 
-		rb.AddForce(transform.right * speed);
+		rb.AddForce(transform.up * speed);
 
 	}
 
@@ -65,7 +70,8 @@ public class vehicleScript : MonoBehaviour {
 		{
 			if(hit.collider.tag=="Car")
 			{
-				speed = 0;
+                brake();
+				
 			}
 			if (hit.collider.tag == "Despawn"){
 				s.addScore();
@@ -81,10 +87,19 @@ public class vehicleScript : MonoBehaviour {
             }
 
         }
+        else
+        {
+            rb.drag = defaultdrag;
+        }
 
 
 	}
 
+    public void brake()
+    {
+        speed = 0;
+        rb.drag = 5;
+    }
 
 	public void setSpeed(int v)
 	{
