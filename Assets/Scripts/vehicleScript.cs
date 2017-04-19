@@ -15,28 +15,30 @@ public class vehicleScript : MonoBehaviour {
     private bool frontEmpty = true;
     private SpriteRenderer sprite;
     private int speed=2;
+    private AudioSource carcrash;
+    //score s = new score();
 
 	// Use this for initialization
 	void Start () {
         sprite = GetComponent<SpriteRenderer>();
         sprite.sprite = arraySprite[Random.Range(0, arraySprite.Length)];
         rb = GetComponent<Rigidbody2D>();
-	}
+        carcrash = GetComponent<AudioSource>();
+    }
 	
-	// Update is called once per frame
+	// Update changed to FixedUpdate because why not
 	void FixedUpdate () {
 
         checkFront();
 
         rb.AddForce(transform.right * speed);
 
-
-
 	}
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         speed = 0;
+        soundOn();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -60,8 +62,12 @@ public class vehicleScript : MonoBehaviour {
         if (hit.collider!=null)
         {
             if(hit.collider.tag=="Car")
+            {
                 speed = 0;
+            }
             if (hit.collider.tag == "Despawn")
+                //s.addScore();
+                score.addScore();
                 Destroy(gameObject);
         }
      
@@ -72,5 +78,10 @@ public class vehicleScript : MonoBehaviour {
     public void setSpeed(int v)
     {
         speed = v;
+    }
+
+    public void soundOn()
+    {
+        carcrash.Play();
     }
 }
