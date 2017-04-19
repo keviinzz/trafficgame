@@ -6,12 +6,11 @@ public class QueueScript : MonoBehaviour
 {
 
 
-    private int maxQueue = 4;
-    private int queue = 0;
+    private int maxQueue = 5;
+    // private int queue = 0;
     int i = 1;
     [SerializeField]
     private GameObject car;
-
     private bool cool = false;
     // Use this for initialization
     void Start()
@@ -22,15 +21,16 @@ public class QueueScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (queue < maxQueue)
+        if (transform.childCount < maxQueue)
         {
             if (!cool)
             {
-                if (i == Random.Range(1, 300))
+                if (i == Random.Range(1, 400))
                 {
                     cool = true;
-                    Instantiate(car, transform.position, transform.rotation);
-                    queue++;
+                    GameObject clone = Instantiate(car, transform.position, transform.rotation);
+                    // queue++;
+                    clone.transform.parent = gameObject.transform;
                     StartCoroutine(cooldown(Random.Range(2, 5)));
                     i = Random.Range(1, 200);
                 }

@@ -6,9 +6,11 @@ using UnityEngine.UI;
 public class soundToggle : MonoBehaviour
 {
     private AudioSource audio;
+    private AudioSource clickSound;
 
     public void Start()
     {
+        clickSound = GetComponent<AudioSource>();
         audio = GetComponent<AudioSource>();
     }
     public void musicOnOff()
@@ -16,11 +18,13 @@ public class soundToggle : MonoBehaviour
         if (audio.mute == true)
         {
             print("suka");
+            clickSound.Play();
             audio.mute = false;
         }
         else
         {
             print("pidor");
+            clickSound.Play();
             audio.mute = true;
         }
     }

@@ -10,6 +10,8 @@ public class ControlScript : MonoBehaviour {
     private GameObject police2;
     RaycastHit hit;
     Ray ray;
+    [SerializeField]
+    private AudioSource whistle;
 
     // Use this for initialization
     void Start () {
@@ -40,12 +42,13 @@ public class ControlScript : MonoBehaviour {
 
             if (hit.transform.tag == "Car")
             {
+                whistle.Play();
                 if(hit.transform.position.x>0)
                     police.transform.up = hit.transform.position - police.transform.position;
 
                 if(hit.transform.position.x<0)
                     police2.transform.up = hit.transform.position - police2.transform.position;
-                hit.transform.GetComponent<vehicleScript>().setSpeed(2);
+                hit.transform.GetComponent<vehicleScript>().setSpeed(4);
             }
             return hit.transform.gameObject;
         }

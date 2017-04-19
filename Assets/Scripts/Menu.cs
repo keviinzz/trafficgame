@@ -10,17 +10,7 @@ public class Menu : MonoBehaviour
 
     private void Awake()
     {
-    //    OptionsCanvas.enabled = false;
-    }
-    public void OptionsOn()
-    {
-    //    OptionsCanvas.enabled = true;
-        MainCanvas.enabled = false;
-    }
-    public void ReturnOn()
-    {
-    //    OptionsCanvas.enabled = false;
-        MainCanvas.enabled = true;
+        //    OptionsCanvas.enabled = false;
     }
     public void ExitOn()
     {
@@ -28,6 +18,7 @@ public class Menu : MonoBehaviour
     }
     public void LoadOn()
     {
+        System.Threading.Thread.Sleep(150);
         Application.LoadLevel ("game");
     }
 }

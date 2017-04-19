@@ -4,8 +4,4 @@ using UnityEngine;
 
 public class xuj : MonoBehaviour
 {
-    void asd()
-    {
-        asdasd;
-    }
 }

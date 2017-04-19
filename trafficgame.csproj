@@ -81,7 +81,7 @@
     <Compile Include="Assets\Scripts\ControlScript.cs" />
     <Compile Include="Assets\Scripts\Menu.cs" />
     <Compile Include="Assets\Scripts\QueueScript.cs" />
-    <Compile Include="Assets\Scripts\arrowGenerator.cs" />
+    <Compile Include="Assets\Scripts\deathMenuScript.cs" />
     <Compile Include="Assets\Scripts\ingameUIScript.cs" />
     <Compile Include="Assets\Scripts\pause.cs" />
     <Compile Include="Assets\Scripts\score.cs" />
@@ -90,6 +90,8 @@
     <Compile Include="Assets\Scripts\splineScript.cs" />
     <Compile Include="Assets\Scripts\trafficLightScript.cs" />
     <Compile Include="Assets\Scripts\vehicleScript.cs" />
+    <Compile Include="Assets\Scripts\xuj.cs" />
+    <Compile Include="Assets\displayHighscore.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

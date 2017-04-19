@@ -9,7 +9,8 @@ public class score : MonoBehaviour {
 
     [SerializeField]
     private Text scoreText;
-
+    [SerializeField]
+    private Text highscoreText;
     public int scorecounter;
 
     void Start()
@@ -18,6 +19,7 @@ public class score : MonoBehaviour {
         scorecounter = 0;
         displayScore();
     }
+
 
     public  void addScore()
     {
@@ -29,5 +31,18 @@ public class score : MonoBehaviour {
     public  void displayScore()
     {
 		scoreText.text = "Score: "+scorecounter.ToString();
+    }
+
+    public void displayHighScore()
+    {
+            highscoreText.text = highscoreText.ToString();
+    }
+
+    public void storeHighscore(int newHighscore)
+    {
+        int oldHighscore = PlayerPrefs.GetInt("highscore", 0);
+        if (newHighscore > oldHighscore)
+            PlayerPrefs.SetInt("highscore", newHighscore);
+        PlayerPrefs.Save();
     }
 }

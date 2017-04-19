@@ -10,28 +10,41 @@ public class ingameUIScript : MonoBehaviour {
 	private int topHappiness=100;
 	private int drainHappiness=2;
 	private bool tick=true;
-  
-	//private int tickloop=5000;
+    public deathMenuScript deathScreen;
+    public score sc;
 
-	[SerializeField]
+    //private int tickloop=5000;
+    [SerializeField]
+    private GameObject barBack;
+    [SerializeField]
 	private GameObject bar;
     private Image sr;
-    
-	// Use this for initialization
-	void Start () {
+    private Color currentColor;
+    private Color defColor;
+    // Use this for initialization
+    void Start () {
 		totalHappiness  = topHappiness;
-        sr=bar.GetComponent<Image>();
-	}
+        sr = bar.GetComponent<Image>();
+        defColor = barBack.GetComponent<Image>().color;
+        currentColor = barBack.GetComponent<Image>().color;
+    }
 	
 	// Update is called once per frame
 	void Update () {
-		if (totalHappiness > topHappiness)
+
+        barBack.GetComponent<Image>().color = currentColor;
+        currentColor = Color.Lerp(currentColor, defColor, Time.deltaTime);
+
+        if (totalHappiness > topHappiness)
 			totalHappiness = topHappiness;
 		if (totalHappiness < 0)
-			totalHappiness = 0;
-	//	print (totalHappiness);
+        {
+            totalHappiness = 0;
+            lose();
+            sc.storeHighscore(sc.scorecounter);
+        }
 
-        if(tick)StartCoroutine (drainBar ());
+        if (tick)StartCoroutine (drainBar ());
 		updateBar ();
 
         if (totalHappiness>70) {
@@ -49,6 +62,7 @@ public class ingameUIScript : MonoBehaviour {
 
     public void addHappiness()
     {
+        currentColor = Color.white;
         totalHappiness = totalHappiness + 10;
     }
 
@@ -64,4 +78,10 @@ public class ingameUIScript : MonoBehaviour {
 		currBar=(float)totalHappiness / topHappiness;
 		bar.transform.localScale = new Vector3 (currBar, 1, 1);
 	}
+
+    void lose()
+    {
+        deathScreen.gameObject.SetActive(true);
+        Time.timeScale = 0;
+    }
 }
