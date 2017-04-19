@@ -6,20 +6,20 @@ using UnityEngine.UI;
 public class Menu : MonoBehaviour
 {
     public Canvas MainCanvas;
-    public Canvas OptionsCanvas;
+    //public Canvas OptionsCanvas;
 
     private void Awake()
     {
-        OptionsCanvas.enabled = false;
+    //    OptionsCanvas.enabled = false;
     }
     public void OptionsOn()
     {
-        OptionsCanvas.enabled = true;
+    //    OptionsCanvas.enabled = true;
         MainCanvas.enabled = false;
     }
     public void ReturnOn()
     {
-        OptionsCanvas.enabled = false;
+    //    OptionsCanvas.enabled = false;
         MainCanvas.enabled = true;
     }
     public void ExitOn()

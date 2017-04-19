@@ -3823,11 +3823,6 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114085478638236770, guid: adfb26b4fc2b0214fba78a81f668c531,
         type: 2}
-      propertyPath: gamemanager
-      value: 
-      objectReference: {fileID: 1404965943}
-    - target: {fileID: 114085478638236770, guid: adfb26b4fc2b0214fba78a81f668c531,
-        type: 2}
       propertyPath: s
       value: 
       objectReference: {fileID: 1682819940}

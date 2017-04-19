@@ -81,7 +81,10 @@
     <Compile Include="Assets\Scripts\ControlScript.cs" />
     <Compile Include="Assets\Scripts\Menu.cs" />
     <Compile Include="Assets\Scripts\QueueScript.cs" />
+    <Compile Include="Assets\Scripts\arrowGenerator.cs" />
+    <Compile Include="Assets\Scripts\ingameUIScript.cs" />
     <Compile Include="Assets\Scripts\pause.cs" />
+    <Compile Include="Assets\Scripts\score.cs" />
     <Compile Include="Assets\Scripts\soundToggle.cs" />
     <Compile Include="Assets\Scripts\spawnScript.cs" />
     <Compile Include="Assets\Scripts\splineScript.cs" />
