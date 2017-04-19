@@ -8,24 +8,26 @@ using UnityEngine.UI;
 public class score : MonoBehaviour {
 
     [SerializeField]
-    private static Text scoreText;
-    public static int scorecounter;
+    private Text scoreText;
+
+    public int scorecounter;
 
     void Start()
     {
+	//	scoreText = GetComponent<Text> ();
         scorecounter = 0;
         displayScore();
     }
 
-    public static void addScore()
+    public  void addScore()
     {
         print("adding score");
         scorecounter = scorecounter + 10;
         displayScore();
         // change the text in the UI script Text
     }
-    public static void displayScore()
+    public  void displayScore()
     {
-        scoreText.text = "Score: " + scorecounter.ToString();
+		scoreText.text = "Score: "+scorecounter.ToString();
     }
 }
