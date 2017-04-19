@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class xuj : MonoBehaviour
 {
-    void printing()
+    void asd()
     {
-        print("suka lox");
+        asdasd;
     }
 }
