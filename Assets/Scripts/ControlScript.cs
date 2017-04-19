@@ -4,16 +4,23 @@ using UnityEngine;
 
 public class ControlScript : MonoBehaviour {
     //asdsda
+    [SerializeField]
+    private GameObject police;
+    [SerializeField]
+    private GameObject police2;
     RaycastHit hit;
     Ray ray;
+
     // Use this for initialization
     void Start () {
          ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+       
     }
 	
 	// Update is called once per frame
 	void Update () {
-
+        
+       
         if (Input.GetMouseButtonDown(0))
         {
             ClickSelect();
@@ -33,6 +40,11 @@ public class ControlScript : MonoBehaviour {
 
             if (hit.transform.tag == "Car")
             {
+                if(hit.transform.position.x>0)
+                    police.transform.up = hit.transform.position - police.transform.position;
+
+                if(hit.transform.position.x<0)
+                    police2.transform.up = hit.transform.position - police2.transform.position;
                 hit.transform.GetComponent<vehicleScript>().setSpeed(2);
             }
             return hit.transform.gameObject;

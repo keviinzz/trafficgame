@@ -17,6 +17,7 @@ public class vehicleScript : MonoBehaviour {
 	private int speed=2;
 	private AudioSource carcrash; 
 	public score s;
+    public ingameUIScript iuis;
 
 	// Use this for initialization
 	void Start () {
@@ -68,13 +69,18 @@ public class vehicleScript : MonoBehaviour {
 			}
 			if (hit.collider.tag == "Despawn"){
 				s.addScore();
-
-					Destroy (gameObject);
-					//gamemanager.GetComponent<score> ().addScore ();
-
+                iuis.addHappiness();
+				Destroy (gameObject);
+				//gamemanager.GetComponent<score> ().addScore ();
 			}
+            if (hit.collider.tag == "DespawnNoScore")
+            {
+                Destroy(gameObject);
+                //gamemanager.GetComponent<score> ().addScore ();
 
-		}
+            }
+
+        }
 
 
 	}
